@@ -1,7 +1,7 @@
 ---
 layout: page
 title: About
-permalink: about
+permalink: about.htm
 ---
 
 *This is an about page.*
