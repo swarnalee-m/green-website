@@ -10,6 +10,7 @@ Github --> DeployHQ --> Dreamhost
 - Renamed `notes-graph` for the same reason as above
 - Added `.htaccess` for 404
 - Added timezone to `_config.yml` for Last Modified plugin to work
+- Updated `site.baseurl` in `head.html` metadata, added `.html` conditional clause, removed `site.url` variable
 - Forked Last Modified plugin to my own account & deleted stale branches
 - Configured [Jekyll Build Commands](https://www.deployhq.com/guides/jekyll) and `vendor` caching on [DeployHQ](https://www.deployhq.com/r/nx7qct)
 
