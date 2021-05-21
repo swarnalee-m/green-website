@@ -7,4 +7,4 @@ Github --> DeployHQ --> Dreamhost
 - Removed relative permalinks due to error I got in [my GH Pages repo](https://github.com/meewgumi/digital-garden-ghpages/commits/main)
 
 ## License
-Source code is available under the [MIT license](LICENSE.md).
+[Original Jekyll template](https://github.com/maximevaillancourt/digital-garden-jekyll-template) is available under the [MIT license](LICENSE.md).
