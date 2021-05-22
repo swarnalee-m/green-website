@@ -2,7 +2,7 @@
 layout: page
 title: Home
 id: home
-permalink: index.htm
+permalink: /
 ---
 
 # Welcome! 🌱
