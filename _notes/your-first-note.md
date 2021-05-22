@@ -6,6 +6,8 @@ title: Your first seed
 
 This is your first note. You'll find it in the [`notes/`](https://github.com/maximevaillancourt/digital-garden-jekyll-template/tree/master/_notes) directory.
 
+`.gitignore` is set to ignore Obsidian system files. I recommend setting Obsidian to automatically save attachments in the `/assets` folder.
+
 ### Link syntax
 
 To link to another note, you can use multiple syntaxes. The following four use the "double-bracket" notation ([view the Markdown source file](https://github.com/maximevaillancourt/digital-garden-jekyll-template/blob/master/_notes/your-first-note.md#link-syntax) to see the underlying syntax).
@@ -29,9 +31,23 @@ Of course, you can also link to external websites, like this: [this is a link to
 
 Some behavior is configurable by tweaking the `_config.yml` file.
 
-**`use_html_extension`**: if you use a static host that doesn't support URLs that don't end with `.html` (such as Neocities), try changing the `use_html_extension` value to `true` in the `_config.yml` file and restart the Jekyll server (or re-build the site). This adds a `.html` extension to note URLs and may resolve issues with links. If you're still having trouble, I recommend using Netlify to host your digital garden: it's free, easy to use, and fully supports this template's features out of the box.
+**`use_html_extension`**: if you use a static host that doesn't support URLs that don't end with `.html` (such as Neocities or Dreamhost), leave this as `true` in the `_config.yml` file. If you configure your `.htaccess` to remove extensions, remember to add `link` metadata for canonical URLs.
 
 **`open_external_links_in_new_tab`**: when set to `true`, this makes external links open in new tabs. Set to `false` to open all links in the current tab.
+
+**`baseurl`**: Set to your full web URL including `https://`
+
+**`timezone`**: Set to your desired posting timezone so that the Last Modified At plugin displays the right date when you edit files.
+
+### Pages
+Save static pages in the root directory in `.md` format. Each page needs to have the following at the top:
+
+```
+---
+layout: page
+title: About
+---
+```
 
 ### Automatic bi-directional links
 
@@ -85,12 +101,11 @@ $ cat /dev/urandom | grep "the answer to life" # shell scripts look nice too
 
 
 ### Next steps
+To deploy via FTP or SSH, configure [Jekyll Build Commands](https://www.deployhq.com/guides/jekyll) and `vendor` caching on [DeployHQ](https://www.deployhq.com/r/nx7qct). Connect to your Github Repo and publish!
 
-**If this template is useful to you in any way, consider [donating](https://ko-fi.com/maximevaillancourt) to support my work**. ☕
+This digital garden template is free and open-source. It runs on Apache servers and the [Github code is available here](https://github.com/meewgumi/apache-digital-garden). This version of the code was modified by [Megumi Tanaka](https://megumi.co) in 2021.
 
-This digital garden template is free, open-source, and [available on GitHub here](https://github.com/maximevaillancourt/digital-garden-jekyll-template).
-
-The easiest way to build your own digital garden based on this template is to read this [step-by-step guide explaining how to set this up from scratch](https://maximevaillancourt.com/blog/setting-up-your-own-digital-garden-with-jekyll). If you need any help, my [DMs are open on Twitter (@vaillancourtmax)](https://twitter.com/vaillancourtmax). 👋
+Based on this [digital garden template](https://github.com/maximevaillancourt/digital-garden-jekyll-template), running on [Netlify](https://maximevaillancourt.com/blog/setting-up-your-own-digital-garden-with-jekyll), created by [Maxime Vaillancourt](https://github.com/maximevaillancourt).  [Buy the original creator a coffee](https://ko-fi.com/maximevaillancourt)! ☕️
 
 Go forth, have fun, and learn new something every day! ✌️
 

@@ -10,14 +10,6 @@ id: home
   Take a look at <span style="font-weight: bold">[[Your first note]]</span> to get started on your exploration.
 </p>
 
-This digital garden template is free, open-source, and [available on GitHub here](https://github.com/maximevaillancourt/digital-garden-jekyll-template).
+This digital garden template is free and open-source. It runs on Apache servers and the [Github code is available here](https://github.com/meewgumi/apache-digital-garden). You can set up deploy actions and Jekyll build commands via Github Actions, or my personal favorite, [DeployHQ](https://www.deployhq.com/). This version of the code was modified by [Megumi Tanaka](https://megumi.co) in 2021.
 
-The easiest way to get started is to read this [step-by-step guide explaining how to set this up from scratch](https://maximevaillancourt.com/blog/setting-up-your-own-digital-garden-with-jekyll). If you need any help, my [DMs are open on Twitter (@vaillancourtmax)](https://twitter.com/vaillancourtmax). Say hi! 👋
-
-If this template helps you in any way, [consider buying me a coffee](https://ko-fi.com/maximevaillancourt)! ☕️
-
-<style>
-  .wrapper {
-    max-width: 46em;
-  }
-</style>
+Based on this [digital garden template](https://github.com/maximevaillancourt/digital-garden-jekyll-template), running on [Netlify](https://maximevaillancourt.com/blog/setting-up-your-own-digital-garden-with-jekyll), created by [Maxime Vaillancourt](https://github.com/maximevaillancourt).  [Buy the original creator a coffee](https://ko-fi.com/maximevaillancourt)! ☕️
