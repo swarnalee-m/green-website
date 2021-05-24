@@ -10,6 +10,7 @@ id: home
   Take a look at <span style="font-weight: bold">[[Your first note]]</span> to get started on your exploration.
 </p>
 
-This digital garden template is free and open-source. It runs on Apache servers and the [Github code is available here](https://github.com/meewgumi/apache-digital-garden). You can set up deploy actions and Jekyll build commands via Github Actions, or my personal favorite, [DeployHQ](https://www.deployhq.com/). This version of the code was modified by [Megumi Tanaka](https://megumi.co) in 2021.
+## Jekyll on LAMP servers
+This digital garden template runs on Apache servers with the LAMP stack. Jekyll build commands are run on [DeployHQ](https://www.deployhq.com/), then deployed to Dreamhost via SSH. Notes are maintained in Markdown format with Obsidian. This version of the template was modified by [Megumi Tanaka](https://megumi.co) in 2021. [Github code is available here](https://github.com/meewgumi/apache-digital-garden). 
 
-Based on this [digital garden template](https://github.com/maximevaillancourt/digital-garden-jekyll-template), running on [Netlify](https://maximevaillancourt.com/blog/setting-up-your-own-digital-garden-with-jekyll), created by [Maxime Vaillancourt](https://github.com/maximevaillancourt).  [Buy the original creator a coffee](https://ko-fi.com/maximevaillancourt)! ☕️
+Based on this [digital garden template](https://github.com/maximevaillancourt/digital-garden-jekyll-template) created by [Maxime Vaillancourt](https://github.com/maximevaillancourt).  [Buy the original creator a coffee](https://ko-fi.com/maximevaillancourt)! ☕️
