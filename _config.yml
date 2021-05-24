@@ -1,11 +1,13 @@
 title:               My digital garden
-include:             ['.htaccess']
 exclude:             ['_includes/notes_graph.json']
 # BaseURL affects metadata in head.html
 baseurl:             'https://megumi.website'
 
 # https://jekyllrb.com/docs/configuration/options/
 timezone: America/Los_Angeles
+
+# Comment out .htaccess if you're uploading to a non-Apache server such as Netlify
+include:             ['.htaccess']
 
 # If you are using a host that cannot resolve URLs that do
 # not end with .html (such as Neocities), set this to 'true'.
