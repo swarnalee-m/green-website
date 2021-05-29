@@ -1,5 +1,5 @@
 # Digital garden Jekyll template
-Demo: [megumi.website](https://megumi.website)
+Demo: [garden.megu.space](https://garden.megu.space)
 
 Powered by: Github --> DeployHQ --> Dreamhost
 
@@ -15,6 +15,8 @@ Powered by: Github --> DeployHQ --> Dreamhost
 - New variable `theme:` which displays on Archive and Note, if it exists
 - Enabled page excerpts and displayed them on Archive page, hiding headings from displaying and formatting all links as internal links
 - For pages, automatically generate page heading from `title:` variable
+- Added back canonical link rel to header with conditional flag based on `use_html_extension: false`
+- Fixed up `site.url` configuration in `head.html` including a separate URL for `/`
 
 ### Apache Specific Updates
 - Need to force `.html` extension for this to work on Dreamhost
