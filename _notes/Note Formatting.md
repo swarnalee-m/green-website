@@ -37,7 +37,7 @@ For internal links, either add `class="internal-link"` to the HTML or add `{: .i
 ```[Markdown Link](/cats){: .internal-link}```
 
 ## Github Flavored Markdown
-This site uses [Commonmark Github Flavored Markdown](https://github.com/github/jekyll-commonmark-ghpages), which replaces the default Kramdown functionality.
+This site uses [Commonmark Github Flavored Markdown](https://github.com/github/jekyll-commonmark-ghpages), which replaces the default Kramdown functionality. Read the [Github Markdown Documentation](https://github.github.com/gfm/).
 
 Most importantly, you can create tables that are compatible with Obsidian and Github:
 

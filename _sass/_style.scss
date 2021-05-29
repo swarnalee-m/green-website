@@ -119,10 +119,13 @@ a {
     color: #aaaaaa;
   }
   &.internal-link:after,
-  &.footnote:after,
-  &.reversefootnote:after {
+  &.footnote-backref:after {
     content: "";
   }
+}
+
+.footnote-ref a::after {
+  content: "";
 }
 
 *:focus {
