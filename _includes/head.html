@@ -2,7 +2,7 @@
   <meta charset="UTF-8">
 
   {% if site.use_html_extension == false %}
-  <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+  <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ page.url }}.html">
   {% endif %}
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,7 +13,7 @@
 
   <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgo=">
 
-  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="styles.css">
 
   {% if page.excerpt %}
   <meta property="og:description" content="{{ page.excerpt | strip_html | strip_newlines | strip | truncate: 160 }}">
@@ -35,13 +35,13 @@
   {% endif %}
 
   {% if page.url == "/" %}
-  <meta property="og:url" content="{{ site.url }}">
+  <meta property="og:url" content="{{ site.url }}/{{ site.baseurl }}">
   {% else %}
-  <meta property="og:url" content="{{ site.url }}{{ page.url }}{%- if site.use_html_extension -%}.html{%- endif -%}">
+  <meta property="og:url" content="{{ site.url }}/{{ site.baseurl }}{{ page.url }}{%- if site.use_html_extension -%}.html{%- endif -%}">
   {% endif %}
 
   {% if page.image %}
-  <meta property="og:image" content="{{ site.url }}{{ page.image }}">
+  <meta property="og:image" content="{{ site.url }}{{ site.baseurl }}{{ page.image }}">
   {% endif %}
 
   <title>

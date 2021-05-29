@@ -4,7 +4,7 @@ Demo: [garden.megu.space](https://garden.megu.space)
 Powered by: Github --> DeployHQ --> Dreamhost
 
 ### General Template Updates
-- Updated `site.baseurl` and `site.url` in `head.html` metadata, added `.html` conditional clause
+- Updated `site.baseurl` and `site.baseurl` in `head.html` metadata, added `.html` conditional clause
 	- Added `url:` config in `_config.yml`
 - Forked Last Modified plugin to my own account & deleted stale branches
 - Added timezone to `_config.yml` for Last Modified plugin to work with my server setup
@@ -16,7 +16,7 @@ Powered by: Github --> DeployHQ --> Dreamhost
 - Enabled page excerpts and displayed them on Archive page, hiding headings from displaying and formatting all links as internal links
 - For pages, automatically generate page heading from `title:` variable
 - Added back canonical link rel to header with conditional flag based on `use_html_extension: false`
-- Fixed up `site.url` configuration in `head.html` including a separate URL for `/` and also used `strip` to remove extra whitespace from meta description
+- Fixed up `site.baseurl` configuration in `head.html` including a separate URL for `/` and also used `strip` to remove extra whitespace from meta description
 - Fixed code block responsivity
 - Enabled [Commonmark Github Flavored Markdown](https://github.com/github/jekyll-commonmark-ghpages) for tables
 	- replaced footnote internal link class for new html 
