@@ -35,7 +35,7 @@ Some behavior is configurable by tweaking the `_config.yml` file.
 
 **`open_external_links_in_new_tab`**: when set to `true`, this makes external links open in new tabs. Set to `false` to open all links in the current tab.
 
-**`baseurl`**: Set to your full web URL including `https://`
+**`url`**: Set to your full web URL including `https://`
 
 **`timezone`**: Set to your desired posting timezone so that the Last Modified At plugin displays the right date when you edit files.
 
