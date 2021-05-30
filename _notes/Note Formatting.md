@@ -1,14 +1,14 @@
 ---
-theme: Getting Started
+category: Getting Started
 ---
 
 ## Front Matter
 At the top of each new note, you must include the triple dashes that make up [Jekyll Front Matter](https://jekyllrb.com/docs/front-matter/).
 
-````js
+```
 ---
 ---
-````
+```
 
 ## Note Title
 The title of the `.md` file will automatically become the note title heading, rendered as an `<h1>`. Keeping this in mind, start your note content from `<h2>` or `##`.
@@ -16,7 +16,7 @@ The title of the `.md` file will automatically become the note title heading, re
 ### Title Override
 Use variable `title:` in the front matter to create a note title that is different from the filename. 
 
-```js
+```
 ---
 title: A note about cats
 ---
@@ -24,10 +24,12 @@ title: A note about cats
 
 In the example above, the filename is `cats.md` but the longer title shows up in the note's heading and `<title>`. See it live at [[cats]].
 
-## Themes (aka Categories)
-The [[archive]] page automatically displays all notes and their themes (if any). Think of a theme like a category without the chronological blog connotation. Inspired by [Low Tech Mag's Archive Page](https://solar.lowtechmagazine.com/archives.html).
+## Categories
+To add a category, add the following to your note front matter:
 
-Themes will also display underneath note title, if they are not null. Eventually I want to make a theme page to view all notes with common themes.
+`category: Cats`
+
+The [[archive]] page automatically displays all notes and their categories (if any). Categories display underneath note title, if they are not null. Eventually I want to make these clickable. Inspired by [Low Tech Mag's Archive Page](https://solar.lowtechmagazine.com/archives.html).
 
 ## Internal Links
 By default, all links created with `<a>` will show up as external links, open in new window, and display a small arrow.
@@ -46,21 +48,21 @@ Most importantly, you can create tables that are compatible with Obsidian and Gi
 | baz | [[cats]] |
 
 The table above was created with this markup:
-`````js
+`````
 | foo | bar |
 | --- | --- |
-| baz | bim |
+| baz | cats |
 `````
 
 More info in the [GFM Documentation](https://github.github.com/gfm/#tables-extension-)
 
 Other options you can add to Commonmark in `_config.yml`:
 
-```js
+```sh
 Valid options: DEFAULT, VALIDATE_UTF8, SMART, LIBERAL_HTML_TAG, FOOTNOTES, STRIKETHROUGH_DOUBLE_TILDE, SOURCEPOS, HARDBREAKS, SAFE, NOBREAKS, GITHUB_PRE_LANG, TABLE_PREFER_STYLE_ATTRIBUTES, FULL_INFO_STRING
 ```
 
-Note that a code block created with ` `` ` has text wrapping, while ` ``` ` does not.
+Note that an inline code block created with ` `` ` has text wrapping, while preformatted blocks created with ` ``` ` do not.
 
 Description of each option [here](https://github.com/gjtorikian/commonmarker#options)
 

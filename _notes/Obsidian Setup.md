@@ -1,5 +1,5 @@
 ---
-theme: Getting Started
+category: Getting Started
 ---
 ## Vault
 Open new folder as vault and select the main digital garden folder.

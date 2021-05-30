@@ -1,6 +1,6 @@
 ---
 title: Your first seed
-theme: Getting Started
+category: Getting Started
 ---
 
 ### Welcome!
@@ -104,7 +104,7 @@ The archive page displays all notes in reverse chronological order. Design is in
 
 Archive page includes:
 - Note title with link to note
-- Note theme (More on theme variables in [[Note Formatting#Themes aka Categories]])
+- Note category
 - Month and Year modified
 - Excerpt
 

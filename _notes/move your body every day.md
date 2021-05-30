@@ -1,5 +1,5 @@
 ---
-theme: Health
+category: Health
 ---
 
 Move your body every day. Benefits include:
