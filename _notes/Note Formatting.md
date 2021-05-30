@@ -43,7 +43,7 @@ Most importantly, you can create tables that are compatible with Obsidian and Gi
 
 | foo | bar |
 | --- | --- |
-| baz | bim |
+| baz | [[cats]] |
 
 The table above was created with this markup:
 `````js
