@@ -5,7 +5,7 @@ id: home
 ---
 
 <p style="padding: 3em 1em; background: #f5f7ff; border-radius: 4px;">
-  Take a look at <span style="font-weight: bold">[[Your first note]]</span> to get started on your exploration.
+  Take a look at <span style="font-weight: bold">[[your-first-note|Your First Note]]</span> to get started on your exploration.
 </p>
 
 ## Jekyll on Apache servers
