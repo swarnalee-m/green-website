@@ -8,12 +8,9 @@ Open new folder as vault and select the main digital garden folder.
 ### Files & Links
 - Set default location for new notes to `_notes`
 - Set default location for attachments to `assets`
-- Set `Use Wikilinks` to `false`[^1]
-	- Otherwise, images will be broken when you drag and drop to insert in a page
-	- Don't worry, you can still create new Wikilinks manually
 
 ## Creating Wikilinks
-When using Wikilinks, ensure that you're select the note in the `_notes` directory so the Jekyll build command works properly. Since we can't [ignore Obsidian folders yet](https://forum.obsidian.md/t/ignore-a-folder-of-temporary-notes/4473/8) and all images must be placed in `/assets`, unfortunately you'll just have to put up with the extra files for now.
+When using Wikilinks[^1], ensure that you're select the note in the `_notes` directory so the Jekyll build command works properly. Since we can't [ignore Obsidian folders yet](https://forum.obsidian.md/t/ignore-a-folder-of-temporary-notes/4473/8) and all images must be placed in `/assets`, unfortunately you'll just have to put up with the extra files for now.
 
 ## Suggested Plugins
 ### Templates
