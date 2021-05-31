@@ -44,8 +44,8 @@ This site uses [Commonmark Github Flavored Markdown](https://github.com/github/j
 
 Most importantly, you can create tables that are compatible with Obsidian and Github:
 
-| foo | bar |
-| --- | --- |
+| foo | bar      | 
+| --- | -------- |
 | baz | [[cats]] |
 
 The table above was created with this markup:

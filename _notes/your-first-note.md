@@ -4,9 +4,7 @@ category: Getting Started
 ---
 
 ### Welcome!
-This is your first note. You'll find it in the [`notes/`](https://github.com/maximevaillancourt/digital-garden-jekyll-template/tree/master/_notes) directory.
-
-`.gitignore` is set to ignore Obsidian system files. I recommend setting Obsidian to automatically save attachments in the `/assets` folder.
+This is your first note. You'll find it in the `_notes/` directory. I recommend using [Obsidian](https://obsidian.md/) to edit Markdown files. Learn more about [[Obsidian Setup]], [[Site Organization]], and [[Note Formatting]]. 
 
 ### Link syntax
 
@@ -19,9 +17,9 @@ To link to another note, you can use multiple syntaxes. The following four use t
 
 In all cases, if the double-bracket link does not point to a valid note, the double brackets will still be shown, like this: [[there is no note that matches this link]].
 
-Alternatively, you can use regular [Markdown syntax](https://www.markdownguide.org/getting-started/) for links, with a relative link to the other note, like this: [this is a Markdown link to the note about cats](/cats){: .internal-link}. Don't forget to use the `.internal-link` class to make sure the link is styled as an internal link (without the little arrow).
+Alternatively, you can use regular [Markdown syntax](https://www.markdownguide.org/getting-started/) for links.
 
-Since the Web is all about HTML, you can always use plain HTML if you want, like this: <a class="internal-link" href="/cats">This is a link to the note about cats with HTML</a>.
+Since the Web is all about HTML, you can always use plain HTML if you want, like this: <a class="internal-link" href="/cats.html">This is a link to the note about cats with HTML</a>. Don't forget to use the `.internal-link` class to make sure the link is styled as an internal link (without the little arrow).
 
 Of course, you can also link to external websites, like this: [this is a link to Wikipedia](https://wikipedia.org/). Again, you can use plain HTML if you prefer. Footnotes are also supported and will be treated like internal links.[^1]
 
@@ -30,6 +28,8 @@ Of course, you can also link to external websites, like this: [this is a link to
 ### Site configuration
 
 Some behavior is configurable by tweaking the `_config.yml` file.
+
+**`favicon`**: Insert an emoji and this will be generated as your site's favicon automatically!
 
 **`use_html_extension`**: if you use a static host that doesn't support URLs that don't end with `.html` (such as Neocities or Dreamhost), leave this as `true` in the `_config.yml` file. If you configure your `.htaccess` to remove extensions, remember to add `link` metadata for canonical URLs.
 
@@ -77,7 +77,7 @@ If you'd like to quote other people, consider using quote blocks:
 
 And of course, images look great:
 
-<img src="/assets/image.jpg"/>
+<img src="assets/image.jpg">
 
 ### Code syntax highlighting
 
@@ -100,7 +100,7 @@ $ cat /dev/urandom | grep "the answer to life" # shell scripts look nice too
 ```
 
 ### Archive
-The archive page displays all notes in reverse chronological order. Design is inspired by https://maximevaillancourt.com/blog.
+The [[archive]] page displays all notes in reverse chronological order. Design is inspired by https://maximevaillancourt.com/blog.
 
 Archive page includes:
 - Note title with link to note
@@ -108,13 +108,23 @@ Archive page includes:
 - Month and Year modified
 - Excerpt
 
-### Next steps
-To deploy via FTP or SSH, configure [Jekyll Build Commands](https://www.deployhq.com/guides/jekyll) and `vendor` caching on [DeployHQ](https://www.deployhq.com/r/nx7qct). Connect to your Github Repo and publish!
+# Installation
+1. Create new respository from the [Github Template](https://github.com/meewgumi/digital-garden-apache-template) by clicking "Use this template"
+2. Customize `_config.yml`
+3. Sign up for [DeployHQ](https://www.deployhq.com/r/nx7qct)
+4. Connect Github repository to DeployHQ
+5. Add your server's FTP or SSH information
+6. Configure [Jekyll Build Commands](https://www.deployhq.com/guides/jekyll) on DeployHQ and turn `vendor` caching on
+7. Deploy!
 
-This digital garden template is free and open-source. It runs on Apache servers and the [Github code is available here](https://github.com/meewgumi/digital-garden-apache-template). This version of the code was modified by [Megumi Tanaka](https://megumi.co) in 2021.
+Optional: [[Obsidian Setup]]
+
+
+# License
+This digital garden template is free and open-source. It runs on Apache/PHP servers and the [Github code is available here](https://github.com/meewgumi/digital-garden-apache-template). This version of the code was modified by [Megumi Tanaka](https://megumi.co) in 2021.
 
 Based on this [digital garden template](https://github.com/maximevaillancourt/digital-garden-jekyll-template), running on [Netlify](https://maximevaillancourt.com/blog/setting-up-your-own-digital-garden-with-jekyll), created by [Maxime Vaillancourt](https://github.com/maximevaillancourt).  [Buy the original creator a coffee](https://ko-fi.com/maximevaillancourt)! ☕️
 
 Go forth, have fun, and learn new something every day! ✌️
 
-### Footnotes
+# Footnotes

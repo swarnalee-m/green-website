@@ -5,6 +5,8 @@ category: Getting Started
 Open new folder as vault and select the main digital garden folder.
 
 ## Settings
+`.gitignore` is set to ignore Obsidian system files. I recommend setting Obsidian to automatically save attachments in the `/assets` folder.
+
 ### Files & Links
 - Set default location for new notes to `_notes`
 - Set default location for attachments to `assets`

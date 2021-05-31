@@ -19,6 +19,6 @@ More info in [[Note Formatting]]
 All assets must be saved in the `assets` directory or they wil not be built by Jekyll.
 
 ## Note Naming
-You can use dashes in your note names, like this: [[local-file-storage]]
+You can use dashes in your note names, like this: [[your-first-note]]
 
 I applied the fix in [this issue](https://github.com/maximevaillancourt/digital-garden-jekyll-template/issues/47) to make this possible.
