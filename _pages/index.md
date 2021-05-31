@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Welcome! 🌱
+title: Welcome!
 id: home
 ---
 

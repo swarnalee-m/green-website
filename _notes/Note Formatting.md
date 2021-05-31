@@ -1,5 +1,6 @@
 ---
 category: Getting Started
+favicon: 😀
 ---
 
 ## Front Matter

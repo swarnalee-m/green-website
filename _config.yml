@@ -1,5 +1,6 @@
-title:               garden.megu.space
+title:               Garden Template
 url:                 'https://garden.megu.space'
+favicon:              🥬
 
 # https://jekyllrb.com/docs/configuration/options/
 timezone: America/Los_Angeles

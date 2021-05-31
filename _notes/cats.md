@@ -1,6 +1,7 @@
 ---
 title: A note about cats
 category: Cats
+favicon: 🐈
 ---
 
 This is a second note with a poem with cats.

@@ -1,6 +1,7 @@
 ---
 layout: page
 title: About
+favicon: 
 ---
 
 **Doing what I do best**—meticulously documenting everything.

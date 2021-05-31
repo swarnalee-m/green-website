@@ -1,6 +1,7 @@
 ---
-category: 
 title: 
+category: 
+favicon: 
 ---
 
 ## 
