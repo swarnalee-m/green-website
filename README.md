@@ -9,6 +9,7 @@ Based on the Jekyll digital garden template by [Maxime Vaillancourt](https://git
 ## How is this different?
 ### New Features
 - Categories! (not clickable yet)
+- Emoji favicons! Configure at site level or page level with `favicon:` variable
 - Archive Page! Shows an index of all notes, month updated, category, and excerpt.
 - Tables! [Commonmark Github Flavored Markdown](<[Commonmark Github Flavored Markdown](https://github.com/github/jekyll-commonmark-ghpages)>)! Table syntax matches Obsidian and Github.
 - Obsidian Templates! Easily create a new note or page with the proper front matter variables.
