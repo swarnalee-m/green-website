@@ -1,6 +1,7 @@
 ---
 category: 
 title: 
+favicon: ⚙️
 ---
 
 ## Pages vs Notes

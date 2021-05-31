@@ -1,5 +1,6 @@
 ---
 category: Getting Started
+favicon: 💎
 ---
 ## Vault
 Open new folder as vault and select the main digital garden folder.

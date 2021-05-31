@@ -1,6 +1,6 @@
 ---
 category: Getting Started
-favicon: 😀
+favicon: 
 ---
 
 ## Front Matter
@@ -31,6 +31,13 @@ To add a category, add the following to your note front matter:
 `category: Cats`
 
 The [[archive]] page automatically displays all notes and their categories (if any). Categories display underneath note title, if they are not null. Eventually I want to make these clickable. Inspired by [Low Tech Mag's Archive Page](https://solar.lowtechmagazine.com/archives.html).
+
+## Favicon
+To override the site favicon on a page level basis, use this variable:
+
+`favicon: 🐈`
+
+Type an emoji directly in your `.md` file and it will replace your favicon for that page only!
 
 ## Internal Links
 By default, all links created with `<a>` will show up as external links, open in new window, and display a small arrow.
