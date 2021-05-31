@@ -1,8 +1,5 @@
-# Digital Garden Jekyll Template
-## Green Web Edition
-Demo: [garden.megu.space](https://garden.megu.space)
-
-This template is a way to organize and publish your thoughts from Obsidian to the web, complete with backlinks, notes graph, and wikilink support. This version of the template was modified by [Megumi Tanaka](https://megumi.co) in 2021.
+# Digital Garden Template
+This template is a way to organize and publish your thoughts from Obsidian to the web, complete with backlinks, notes graph, and wikilink support. This version of the template was modified by [Megumi Tanaka](https://megumi.co) in 2021. Installation instructions <a href="https://garden.megu.space/your-first-note.html#installation">here</a>.
 
 Based on the Jekyll digital garden template by [Maxime Vaillancourt](https://github.com/maximevaillancourt/digital-garden-jekyll-template).
 
@@ -48,7 +45,7 @@ If you want to use this template on Netlify, just remove `.htaccess` and delete 
 ## Why not Wordpress?
 You might be wondering why I'm so committed to using a Jekyll flat file system on a PHP/Python server. It's mostly because I enjoy writing Markdown files in Obsidian. It's so easy to update multiple files at once, something that Wordpress makes absurdly difficult.
 
-Wordpress seriously hinders my ability to write—not only in the loading speed of the editor, but also the feeling I get when I log in to the admin panel. I'm teaching myself Jekyll, Ruby, and Liquid to modify this digital garden template because I believe it's the best organization system for the way my mind works. And it makes me excited to open Obsidian and write things! 
+Wordpress seriously hinders my ability to write—not only in the loading speed of the editor, but also the feeling I get when I log in to the admin panel. I'm teaching myself Jekyll, Ruby, and Liquid to modify this digital garden template because I believe it's the best organization system for the way my mind works. And it makes me excited to open Obsidian and write things!
 
 Read more about digital gardening on [Maggie Appleton's repo](https://github.com/MaggieAppleton/digital-gardeners).
 
@@ -59,6 +56,6 @@ Interesting errors I've encountered:
 - This template only works for apex and subdomains. If you build your site in a `/directory`, you may have to reconfigure the relative links throughout the template.
 
 # License
-[Original Jekyll template](https://github.com/maximevaillancourt/digital-garden-jekyll-template) by Maxime Vaillancourt is available under the [MIT license](LICENSE.md). [Buy Maxime a coffee](https://ko-fi.com/maximevaillancourt)! ☕️ 
+[Original Jekyll template](https://github.com/maximevaillancourt/digital-garden-jekyll-template) by Maxime Vaillancourt is available under the [MIT license](LICENSE.md). [Buy Maxime a coffee](https://ko-fi.com/maximevaillancourt)! ☕️
 
 This modified version by Megumi Tanaka is also publicly available and you are free to edit as you wish!
