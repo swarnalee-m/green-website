@@ -111,7 +111,7 @@ Archive page includes:
 ### Next steps
 To deploy via FTP or SSH, configure [Jekyll Build Commands](https://www.deployhq.com/guides/jekyll) and `vendor` caching on [DeployHQ](https://www.deployhq.com/r/nx7qct). Connect to your Github Repo and publish!
 
-This digital garden template is free and open-source. It runs on Apache servers and the [Github code is available here](https://github.com/meewgumi/apache-digital-garden). This version of the code was modified by [Megumi Tanaka](https://megumi.co) in 2021.
+This digital garden template is free and open-source. It runs on Apache servers and the [Github code is available here](https://github.com/meewgumi/digital-garden-apache-template). This version of the code was modified by [Megumi Tanaka](https://megumi.co) in 2021.
 
 Based on this [digital garden template](https://github.com/maximevaillancourt/digital-garden-jekyll-template), running on [Netlify](https://maximevaillancourt.com/blog/setting-up-your-own-digital-garden-with-jekyll), created by [Maxime Vaillancourt](https://github.com/maximevaillancourt).  [Buy the original creator a coffee](https://ko-fi.com/maximevaillancourt)! ☕️
 

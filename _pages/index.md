@@ -9,7 +9,7 @@ id: home
 </p>
 
 ## Digital Garden Template
-This template is a way to organize and publish your thoughts from Obsidian to the web, complete with backlinks, notes graph, and wikilink support. This version of the template was modified by [Megumi Tanaka](https://megumi.co) in 2021. [Github code is available here](https://github.com/meewgumi/apache-digital-garden).
+This template is a way to organize and publish your thoughts from Obsidian to the web, complete with backlinks, notes graph, and wikilink support. This version of the template was modified by [Megumi Tanaka](https://megumi.co) in 2021. [Github code is available here](https://github.com/meewgumi/digital-garden-apache-template).
 
 Based on the Jekyll digital garden template by [Maxime Vaillancourt](https://github.com/maximevaillancourt/digital-garden-jekyll-template).
 
