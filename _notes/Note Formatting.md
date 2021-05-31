@@ -35,9 +35,9 @@ The [[archive]] page automatically displays all notes and their categories (if a
 ## Internal Links
 By default, all links created with `<a>` will show up as external links, open in new window, and display a small arrow.
 
-For internal links, either add `class="internal-link"` to the HTML or add `{: .internal-link}` after a Markdown link like this:
+For internal links, add `class="internal-link"` to the HTML.
 
-```[Markdown Link](/cats){: .internal-link}```
+Unfortunately, `{: .internal-link}` stopped working when I switched to Commonmark.
 
 ## Github Flavored Markdown
 This site uses [Commonmark Github Flavored Markdown](https://github.com/github/jekyll-commonmark-ghpages), which replaces the default Kramdown functionality. Read the [Github Markdown Documentation](https://github.github.com/gfm/).
