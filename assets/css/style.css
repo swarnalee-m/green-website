@@ -211,7 +211,7 @@ a.internal-link:after, a.footnote-backref:after {
 
 .nodes circle {
   cursor: pointer;
-  fill: #8b88e6;
+  fill: var(--primary-color);
   transition: all 0.15s ease-out;
 }
 

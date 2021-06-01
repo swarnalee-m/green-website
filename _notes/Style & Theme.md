@@ -10,3 +10,6 @@ I'm removing the SCSS because I'm a big fan of pure CSS variables. I'm also remo
 
 The new stylesheet will live in `assets/css`, organized according to the [Jekyll documentation](https://jekyllrb.com/docs/step-by-step/07-assets/). I also added an empty `js` folder just in case and an `images` folder for attachments. This way all assets are automatically built to `_site` without the need for additional configuration.
 
+- Moved all notes-graph CSS to the main stylesheet
+	- uses `--primary-color` variable
+- Moved notes-graph js to `assets/js`

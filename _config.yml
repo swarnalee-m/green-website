@@ -16,7 +16,7 @@ exclude:             ['_includes/notes_graph.json','obsidian-templates']
 use_html_extension:  true
 
 # 'True' displays notes graph at bottom of each note
-show_notes_graph: true
+show_notes_graph: false
 
 # Set to `true` to open non-internal links in new tabs, or
 # set to `false` to open non-internal links in current tab.
