@@ -1,5 +1,5 @@
 # Digital Garden Template
-This template is a way to organize and publish your thoughts from Obsidian to the web, complete with backlinks, notes graph, and wikilink support. This version of the template was modified by [Megumi Tanaka](https://megumi.co) in 2021. Installation instructions <a href="https://garden.megu.space/your-first-note.html#installation">here</a>.
+This Jekyll template is a way to organize and publish your thoughts from Obsidian to the web, complete with backlinks, notes graph, and wikilink support. This version of the template was modified by [Megumi Tanaka](https://megumi.co) in 2021. Installation instructions <a href="https://garden.megu.space/your-first-note.html#installation">here</a>.
 
 Based on the Jekyll digital garden template by [Maxime Vaillancourt](https://github.com/maximevaillancourt/digital-garden-jekyll-template).
 
@@ -14,7 +14,6 @@ Based on the Jekyll digital garden template by [Maxime Vaillancourt](https://git
 - Permalink `/:slug` by default for all notes and pages, so you don't need to specify `permalink:` anymore! By default, all pages will be built in the root directory.
 - Responsive code blocks! Enabled horizontal scroll for codeblocks on narrow browsers.
 - Updated metadata in `head.html` with way more conditional logic based on site configuration, stripped extra whitespace from descriptions, and made sure absolute URLs for OpenGraph are rendering properly
-- Renamed some components of `notes-graph` based on errors I was getting on non-Netlify servers
 
 ### PHP/Python Server Support
 Powered by: Github --> [DeployHQ](https://www.deployhq.com/r/nx7qct) --> Dreamhost
