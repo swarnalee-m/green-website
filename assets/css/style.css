@@ -1,12 +1,14 @@
 /* Global Styles */
 :root {
   --text-color: rgb(29, 31, 32);
+  --text-color-faded: rgb(29, 31, 32, 0.5);
   --primary-color: rgb(156, 213, 56);
-  --background-color: rgba(156, 213, 56, .2);
+  --background-color: rgba(156, 213, 56, .15);
+  --callout-background: rgba(156, 213, 56, .08);
   --primary-font: "Inter", -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
   --heading-font: "Wremena", "Times", "Times New Roman", serif;
   /* Set headings to large size by increasing :root font size */
-  font-size: 1.75em;
+  font-size: 2.5em;
   line-height: 1.7;
   letter-spacing: -0.015em;
   -webkit-font-smoothing: antialiased;
@@ -14,8 +16,8 @@
 }
 
 /* Reset non-headings to a smaller size while retaining visual rhythm */
-content>:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
-  font-size: .8rem;
+main>*>:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6), footer *, nav * {
+  font-size: .6rem;
 }
 
 /* Full bleed reset */
@@ -39,6 +41,39 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.3;
   margin-bottom: 0;
   padding-bottom: 0;
+  font-weight: 100;
+}
+
+h1:first-of-type {
+  font-size: 200%;
+}
+
+h2+h3 {
+  margin-top: 0.25em;
+}
+
+h1+p, h2+p, h3+p {
+  margin-top: 0.25em;
+}
+
+h3 {
+  font-weight: 400;
+  font-size: 0.900rem;
+}
+
+aside h3 {
+  font-size: 0.7rem;
+  font-weight: 500;
+  padding: 1em;
+}
+
+aside * {
+  font-size: 0.5rem;
+}
+
+aside {
+  display: grid;
+  grid-gap: 1em;
 }
 
 nav {
@@ -63,9 +98,16 @@ main section {
   }
 }
 
+section.callout {
+  padding: 3em 1em;
+  background: var(--callout-background);
+  border-radius: 4px;
+  margin: 1em 0;
+}
+
 /* Backlink box */
 .backlink-box {
-  background: #f6f6f6;
+  background: var(--callout-background);
   padding: 1em;
   border-radius: 4px
 }
@@ -73,7 +115,7 @@ main section {
 .invalid-link {
   color: #444444;
   cursor: help;
-  background: #fafafa;
+  background: var(--callout-background);
   padding: 0 0.1em
 }
 
@@ -83,10 +125,10 @@ main section {
 }
 
 /* Article */
-time {
-  display: block;
-  color: #4d4d4d;
-  margin: 0.5em 0 1em
+header {
+  color: var(--text-color-faded);
+  font-size: 0.5rem;
+  padding-bottom: 2em;
 }
 
 img {
@@ -100,7 +142,7 @@ blockquote {
   padding: 1.5em;
   margin: 0;
   font-size: 0.88em;
-  background: #f6f6f6;
+  background: var(--callout-background);
   border-radius: 4px
 }
 
@@ -113,14 +155,13 @@ hr {
   border: 0;
   height: 1px;
   margin: 1.5em 0;
-  background: #d9d9d9
+  /* background: #d9d9d9 */
 }
 
 /* Footer */
 footer {
   margin: 2em 0;
-  font-size: 0.8em;
-  color: #5c5c5c;
+  /* color: var(--text-color-faded); */
   padding-top: 1em
 }
 
@@ -139,21 +180,13 @@ ul.archive, .archive li {
   margin-top: 0
 }
 
-.archive a.internal-link {
-  background-color: inherit;
-  font-weight: 600;
-  text-decoration: none;
-  border-bottom: 2px solid #ddd;
-  color: #000
-}
-
 .archive span {
   opacity: 0.6
 }
 
 /* Tables in Markdown */
 table, table>*>*>* {
-  border: 1px solid #d9d9d9;
+  border: 1px solid var(--text-color-faded);
   border-collapse: collapse
 }
 
@@ -163,44 +196,44 @@ table th, table td {
 
 /* Links */
 a {
-  transition: background 300ms;
-  padding: 0 1em;
-  text-decoration: none;
-  /* border-bottom: 1px solid #d9d9d9; */
-  /* color: #1a1a1a; */
-  background-color: var(--primary-color);
+  transition: all 300ms;
   font-weight: bold;
-  border-radius: 1em;
   color: inherit;
-  display: inline-flex;
+  border-bottom: 4px solid var(--primary-color);
+  text-decoration: none;
 }
 
-a:hover {
-  color: black !important;
-  /* background: #fffaf1 */
-  background-color: rgba(var(--primary-color), .5);
+a:hover, a:focus {
+  transition: all 300ms;
+  background: var(--primary-color)
 }
 
-a:after {
-  position: relative;
-  top: -0.5em;
+a::after {
   font-size: 0.7em;
   content: "↗";
-  color: #aaaaaa;
-  display: table-caption;
+  color: var(--text-color-faded);
+  top: -0.5em;
+  position: relative;
 }
 
 a.internal-link:after, a.footnote-backref:after {
-  content: ""
+  content: "";
 }
 
+*:focus {
+  background: var(--primary-color);
+}
+
+/* Footnotes */
 .footnote-ref a::after {
   content: ""
 }
 
-*:focus {
-  background: #ffe8bc !important;
-  color: black !important
+.footnote-ref a, a.footnote-backref {
+  background-color: var(--primary-color);
+  border-bottom: 0;
+  border-radius: 10em;
+  padding: 0 .3em;
 }
 
 /* Graph */
@@ -233,31 +266,34 @@ a.internal-link:after, a.footnote-backref:after {
 }
 
 #graph-wrapper {
-  background: #fcfcfc;
+  background: var(--callout-background);
   border-radius: 4px;
   height: auto;
 }
 
 /* Code blocks */
 code {
-  background: #f5f5f5;
-  padding: 0.1em 0.2em;
-  border-radius: 4px
+  background: var(--callout-background);
+  padding: 0 0.2em;
+  border-radius: 4px;
+  /* vertical-align: middle;
+  font-size: 1.3em; */
 }
 
 pre code {
-  padding: 0
+  padding: 0;
+  background: transparent;
 }
 
 pre {
-  background: #f5f5f5;
+  background: var(--callout-background);
   padding: 0.5em 1em;
   border-radius: 4px;
   overflow-x: scroll
 }
 
 div.highlight {
-  background: #f5f5f5;
+  background: var(--callout-background);
   border-radius: 4px;
   font-size: 1em;
   font-size: 0.9em;
@@ -267,7 +303,8 @@ div.highlight {
 }
 
 div.highlight pre {
-  margin: 1em
+  margin: 1em;
+  background: transparent;
 }
 
 .highlight .c {

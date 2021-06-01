@@ -4,8 +4,8 @@ title: Welcome!
 id: home
 ---
 
-<p style="padding: 3em 1em; background: #f5f7ff; border-radius: 4px;">
-	Take a look at <span style="font-weight: bold"><a href="/your-first-note.html" class="internal-link">Your First Note</a></span> to get started on your exploration.
-</p>
+<section class="callout">
+	Take a look at <a href="/your-first-note.html" class="internal-link">Your First Note</a> to get started on your exploration.
+</section>
 
 {% include_relative README.md %}

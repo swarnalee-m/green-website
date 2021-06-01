@@ -3,29 +3,20 @@ layout: default
 ---
 
 <article>
-  <header>
     <h1>{{ page.title }}</h1>
-    {% if page.category != null %}<small>{{page.category}}</small>{% endif %}
-
-    <time datetime="{{ page.last_modified_at | date_to_xmlschema }}">{% if page.type != 'pages' %}
-      Last updated on {{ page.last_modified_at | date: "%B %-d, %Y" }}
-      {% endif %}
-    </time>
-  </header>
+    <header><time datetime="{{ page.last_modified_at | date_to_xmlschema }}">{% if page.type != 'pages' %}Last updated {{ page.last_modified_at | date: "%B %-d, %Y" }}{% endif %}</time> &ndash; {% if page.category != null %}{{page.category}}{% endif %}</header>
 
   {{ content }}
 </article>
 <aside>
   <h3>Notes mentioning this note</h3>
   {% if page.backlinks.size > 0 %}
-  <div style="display: grid; grid-gap: 1em; grid-template-columns: repeat(1fr);">
     {% for backlink in page.backlinks %}
     <div class="backlink-box">
-      <a class="internal-link" href="{{ backlink.url }}{%- if site.use_html_extension -%}.html{%- endif -%}">{{ backlink.title }}</a><br>
-      <div>{{ backlink.excerpt | strip_html | truncatewords: 20 }}</div>
+      <a class="internal-link" href="{{ backlink.url }}{%- if site.use_html_extension -%}.html{%- endif -%}">{{ backlink.title }}</a>
+      <p>{{ backlink.excerpt | strip_html | truncatewords: 20 }}</p>
     </div>
     {% endfor %}
-  </div>
   {% else %}
 
   <div>
