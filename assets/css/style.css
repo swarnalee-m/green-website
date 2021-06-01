@@ -1,38 +1,92 @@
 /* Global Styles */
 :root {
-  --text-color: #1D1F20;
-  --primary-color: yellowgreen;
-  --secondary-color: lightgreen;
-  font-size: 1.5em;
-  letter-spacing: -0.01em;
+  --text-color: rgb(29, 31, 32);
+  --primary-color: rgb(156, 213, 56);
+  --background-color: rgba(156, 213, 56, .2);
+  --primary-font: "Inter", -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
+  --heading-font: "Wremena", "Times", "Times New Roman", serif;
+  /* Set headings to large size by increasing :root font size */
+  font-size: 1.75em;
+  line-height: 1.7;
+  letter-spacing: -0.015em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
+/* Reset non-headings to a smaller size while retaining visual rhythm */
+content>:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
+  font-size: .8rem;
+}
+
+/* Full bleed reset */
 body, html {
   margin: 0;
   padding: 0;
 }
 
+/* Body Styles */
 body {
-  box-sizing: content-box;
-  font-family: "Times", "Times New Roman", serif;
+  background-color: var(--background-color);
+  font-family: var(--primary-font);
+  color: var(--text-color);
   margin: 0 auto;
-  line-height: 1.7;
   padding: 4vh 6vw;
   overflow-x: hidden;
-  color: var(--text-color);
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font);
+  line-height: 1.3;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+nav {
+  margin: 1em 0 3em
+}
+
+#notes-entry-container, main {
+  display: grid;
+  grid-gap: 2em;
+  grid-template-columns: 3fr 1fr;
+  grid-template-areas: "article aside"
+}
+
+main section {
+  grid-column: 1 / -1;
+}
+
+@media (max-width: 1200px) {
+  content, side, article, aside {
+    grid-column: 1 / -1;
+    max-width: calc(100vw - 12vw)
+  }
+}
+
+/* Backlink box */
+.backlink-box {
+  background: #f6f6f6;
+  padding: 1em;
+  border-radius: 4px
+}
+
+.invalid-link {
+  color: #444444;
+  cursor: help;
+  background: #fafafa;
+  padding: 0 0.1em
+}
+
+.invalid-link-brackets {
+  color: #ccc;
+  cursor: help
+}
+
+/* Article */
 time {
   display: block;
   color: #4d4d4d;
   margin: 0.5em 0 1em
-}
-
-footer {
-  margin: 2em 0;
-  font-size: 0.8em;
-  color: #5c5c5c;
-  padding-top: 1em
 }
 
 img {
@@ -42,7 +96,35 @@ img {
   border-radius: 4px
 }
 
-/* Archive */
+blockquote {
+  padding: 1.5em;
+  margin: 0;
+  font-size: 0.88em;
+  background: #f6f6f6;
+  border-radius: 4px
+}
+
+blockquote p {
+  margin: 0
+}
+
+hr {
+  width: 100%;
+  border: 0;
+  height: 1px;
+  margin: 1.5em 0;
+  background: #d9d9d9
+}
+
+/* Footer */
+footer {
+  margin: 2em 0;
+  font-size: 0.8em;
+  color: #5c5c5c;
+  padding-top: 1em
+}
+
+/* Archive Page */
 ul.archive, .archive li {
   list-style-type: none;
   margin-left: 0;
@@ -79,32 +161,6 @@ table th, table td {
   padding: 0.25em 0.5em
 }
 
-blockquote {
-  padding: 1.5em;
-  margin: 0;
-  font-size: 0.88em;
-  background: #f6f6f6;
-  border-radius: 4px
-}
-
-blockquote p {
-  margin: 0
-}
-
-hr {
-  width: 100%;
-  border: 0;
-  height: 1px;
-  margin: 1.5em 0;
-  background: #d9d9d9
-}
-
-h1, h2, h3, h4, h5, h6 {
-  line-height: 1.3;
-  margin-bottom: 0;
-  padding-bottom: 0
-}
-
 /* Links */
 a {
   transition: background 300ms;
@@ -122,7 +178,7 @@ a {
 a:hover {
   color: black !important;
   /* background: #fffaf1 */
-  background-color: var(--secondary-color);
+  background-color: rgba(var(--primary-color), .5);
 }
 
 a:after {
@@ -147,40 +203,39 @@ a.internal-link:after, a.footnote-backref:after {
   color: black !important
 }
 
-nav {
-  margin: 1em 0 3em
+/* Graph */
+.links line {
+  stroke: #ccc;
+  opacity: 0.5;
 }
 
-#notes-entry-container {
-  display: grid;
-  grid-gap: 2em;
-  grid-template-columns: 3fr 1fr;
-  grid-template-areas: "content side"
+.nodes circle {
+  cursor: pointer;
+  fill: #8b88e6;
+  transition: all 0.15s ease-out;
 }
 
-@media (max-width: 1200px) {
-  content, side {
-    grid-column: 1 / -1;
-    max-width: calc(100vw - 12vw)
-  }
+.text text {
+  cursor: pointer;
+  fill: #333;
+  text-shadow: -1px -1px 0 #fafafabb, 1px -1px 0 #fafafabb, -1px 1px 0 #fafafabb, 1px 1px 0 #fafafabb;
 }
 
-.backlink-box {
-  background: #f6f6f6;
-  padding: 1em;
-  border-radius: 4px
+.nodes [active],
+.text [active] {
+  cursor: pointer;
+  fill: black;
 }
 
-.invalid-link {
-  color: #444444;
-  cursor: help;
-  background: #fafafa;
-  padding: 0 0.1em
+.inactive {
+  opacity: 0.1;
+  transition: all 0.15s ease-out;
 }
 
-.invalid-link-brackets {
-  color: #ccc;
-  cursor: help
+#graph-wrapper {
+  background: #fcfcfc;
+  border-radius: 4px;
+  height: auto;
 }
 
 /* Code blocks */
