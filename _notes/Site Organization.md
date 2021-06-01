@@ -6,18 +6,26 @@ favicon: ⚙️
 
 ## Pages vs Notes
 Site content is separated into two main categories:
-1. **Pages** are static pages such as `about.md`, saved in the root directory
+1. **Pages** are static pages such as `about.md`, saved in the `_pages` directory
 2. **Notes** are your connected knowledge, saved in `_notes` directory
 
-Both notes and pages support wikilinks. When you build your site, these markdown files are converted to html.
+Both notes and pages support wikilinks. When you build your site, these markdown files are converted to html and exported to the `_site` directory, which makes up your live website.
+
+### Page Exceptions
+`index.md` is saved in the root directory so that I can use an include to `README.md` and avoid having to write the same content twice. Feel free to move this to `_pages` if you remove the include—the page will still render in the root directory once you build the site.
 
 ## Note Features
 Since the notes are set up as a Jekyll collection rather than a post item, you cannot use built in category or tag features. The advantage of this is being able to name your note anything you want, rather than adhering to Jekyll's requirement to add the date to a post filename.
 
-More info in [[Note Formatting]]
+Since notes are technically a collection of pages, you can create your own variables. I've configured a custom variable called `category:` that you can use on notes. More info in [[Note Formatting]].
 
 ## Assets
-All assets must be saved in the `assets` directory or they wil not be built by Jekyll.
+All assets must be saved in the `assets` directory or they will not be built by Jekyll. By default, the Assets folder contains the following subfolders:
+- `css`
+- `images`
+- `js`
+
+Save all attachments to the `assets/images` directory. More on this in [[Obsidian Setup]].
 
 ## Note Naming
 You can use dashes in your note names, like this: [[your-first-note]]
