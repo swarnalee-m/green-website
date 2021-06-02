@@ -14,6 +14,8 @@ _includes/notes_graph.json
 
 # Obsidian config
 .obsidian/
+unlinked files output.md
+unresolved links output.md
 
 # MacOS System Files
 .DS_Store
