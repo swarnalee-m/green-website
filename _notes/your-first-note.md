@@ -29,7 +29,7 @@ Of course, you can also link to external websites, like this: [this is a link to
 
 Some behavior is configurable by tweaking the `_config.yml` file.
 
-**`favicon`**: Insert an emoji and this will be generated as your site's favicon automatically!
+**`favicon`**: Insert an emoji and this will be generated as your site's favicon automatically! This is only supported by browsers that recognize svg favicons, which is the majority of modern browsers.
 
 **`use_html_extension`**: if you use a static host that doesn't support URLs that don't end with `.html` (such as Neocities or Dreamhost), leave this as `true` in the `_config.yml` file. If you configure your `.htaccess` to remove extensions, remember to add `link` metadata for canonical URLs.
 

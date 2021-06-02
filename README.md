@@ -1,5 +1,5 @@
 # Digital Garden Template
-This Jekyll template is a way to organize and publish your thoughts from Obsidian to the web, complete with backlinks, notes graph, and wikilink support. This version of the template was modified by [Megumi Tanaka](https://megumi.co) in 2021. Installation instructions <a href="https://garden.megu.space/your-first-note.html#installation">here</a>.
+This Jekyll template is a way to organize and publish your thoughts from [Obsidian](https://obsidian.md/) to the web, complete with backlinks, notes graph, and wikilink support. This version of the template was modified by [Megumi Tanaka](https://megumi.co) in 2021. Installation instructions <a href="https://garden.megu.space/your-first-note.html#installation">here</a>.
 
 Based on the Jekyll digital garden template by [Maxime Vaillancourt](https://github.com/maximevaillancourt/digital-garden-jekyll-template).
 
