@@ -13,3 +13,10 @@ The new stylesheet will live in `assets/css`, organized according to the [Jekyll
 - Moved all notes-graph CSS to the main stylesheet
 	- uses `--primary-color` variable
 - Moved notes-graph js to `assets/js`
+
+# Typefaces
+I chose [Inter](https://rsms.me/inter/) and [Wremena](https://typefaces.temporarystate.net/preview/Wremena). Inter is the UI typeface for Obsidian, and the variable font version has lots of fun features.
+
+For dates, I've enabled alternate numbers, slashed zeroes, and case sensitive forms. I've also enabled superscript, fractions, and disambiguation glyph set by default.
+
+Wremena is used for headings. I've enabled tabular numbers, just in case you add some numbers to your note titles.

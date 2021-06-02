@@ -1,3 +1,5 @@
+@import 'fonts.css';
+
 /* Global Styles */
 :root {
   --heading-color: rgb(29, 31, 32);
@@ -6,10 +8,11 @@
   --primary-color: rgb(156, 213, 56);
   --background-color: rgba(156, 213, 56, .15);
   --callout-background: rgba(156, 213, 56, .08);
-  --primary-font: "Inter", -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
+  --primary-font: "Inter Variable", "Inter", -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
   --heading-font: "Wremena", "Times", "Times New Roman", serif;
-  /* Set headings to large size by increasing :root font size */
-  font-size: 2.5em;
+  /* Set headings to large size by increasing :root em font size */
+  /* Calc with vw makes font sizes intrinsically responsive */
+  font-size: calc(1.75em + 0.5vw);
   line-height: 1.7;
   letter-spacing: -0.015em;
   -webkit-font-smoothing: antialiased;
@@ -21,6 +24,13 @@ main>*>:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6), footer *, nav * {
   font-size: .6rem;
 }
 
+/*
+@supports (font-variation-settings: normal) {
+  h1 {
+    font-family: "NewsReader Variable", serif;
+    font-variation-settings: "opsz"33.5 "wght"261;
+  }
+} */
 /* Full bleed reset */
 body, html {
   margin: 0;
@@ -32,23 +42,38 @@ body {
   background-color: var(--background-color);
   font-family: var(--primary-font);
   color: var(--text-color);
+  max-width: 1750px;
   margin: 0 auto;
   padding: 4vh 6vw;
   overflow-x: hidden;
+}
+
+::selection {
+  color: white;
+  background: var(--primary-color);
+}
+
+::-moz-selection {
+  color: white;
+  background: var(--primary-color);
 }
 
 /* Heading Styles */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--heading-font);
   color: var(--heading-color);
-  line-height: 1.3;
   margin-bottom: 0;
   padding-bottom: 0;
   font-weight: 100;
+  line-height: 1.3;
+  word-break: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
 }
 
 h1:first-of-type {
   font-size: 200%;
+  line-height: 1;
 }
 
 h2+h3 {
@@ -62,21 +87,6 @@ h1+p, h2+p, h3+p {
 h3 {
   font-weight: 400;
   font-size: 0.900rem;
-}
-
-aside h3 {
-  font-size: 0.7rem;
-  font-weight: 500;
-  padding: 1em;
-}
-
-aside * {
-  font-size: 0.5rem;
-}
-
-aside {
-  display: grid;
-  grid-gap: 1em;
 }
 
 nav {
@@ -109,25 +119,25 @@ section.callout {
 }
 
 /* Backlink box */
+aside {
+  display: grid;
+  grid-gap: 1em;
+  align-content: start;
+}
+
 .backlink-box {
   background: var(--callout-background);
   padding: 1em;
-  border-radius: 4px
-}
-
-.invalid-link {
-  color: #444444;
-  cursor: help;
-  background: var(--callout-background);
-  padding: 0 0.1em
-}
-
-.invalid-link-brackets {
-  color: #ccc;
-  cursor: help
+  border-radius: 4px;
+  font-size: 0.5rem;
 }
 
 /* Article */
+header, .archive span {
+  font-feature-settings: "ss01"1, "zero"1, "case"1;
+  font-variant-numeric: slashed-zero;
+}
+
 header p {
   color: var(--text-color-faded);
   font-size: 0.5rem;
@@ -233,7 +243,23 @@ a.internal-link:after, a.footnote-backref:after {
   background: var(--primary-color);
 }
 
+.invalid-link {
+  color: var(--text-color-faded);
+  cursor: help;
+  background: var(--callout-background);
+  padding: 0 0.1em
+}
+
+.invalid-link-brackets {
+  color: #ccc;
+  cursor: help
+}
+
 /* Footnotes */
+sup {
+  font-feature-settings: "sups"1;
+}
+
 .footnote-ref a::after {
   content: ""
 }

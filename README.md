@@ -55,6 +55,6 @@ Interesting errors I've encountered:
 - This template only works for apex and subdomains. If you build your site in a `/directory`, you may have to reconfigure the relative links throughout the template.
 
 # License
-[Original Jekyll template](https://github.com/maximevaillancourt/digital-garden-jekyll-template) by Maxime Vaillancourt is available under the [MIT license](LICENSE). [Buy Maxime a coffee](https://ko-fi.com/maximevaillancourt)! ☕️
+[Original Jekyll template](https://github.com/maximevaillancourt/digital-garden-jekyll-template) by Maxime Vaillancourt is available under the [MIT license](LICENSE.md). [Buy Maxime a coffee](https://ko-fi.com/maximevaillancourt)! ☕️
 
 This modified version by Megumi Tanaka is also publicly available and you are free to edit as you wish!
