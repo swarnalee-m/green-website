@@ -31,3 +31,6 @@ Save all attachments to the `assets/images` directory. More on this in [[Obsidia
 You can use dashes in your note names, like this: [[your-first-note]]
 
 I applied the fix in [this issue](https://github.com/maximevaillancourt/digital-garden-jekyll-template/issues/47) to make this possible.
+
+## Style
+The site theme is controlled by `css/style.css`. Read documentation on the current theme in [[Style & Theme]].
