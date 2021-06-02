@@ -13,8 +13,6 @@ Open new folder as vault and select the main digital garden folder.
 - Set default location for attachments to `assets/images`
 	- Be careful not to select `_site/assets`. Instead, select the folder in your root directory.
 
-When using Wikilinks, 
-
 Make sure you're working on notes in the `_notes` directory, not `_site`. Unfortunately, you'll just have to put up with all the extra files in your Obsidian view since we can't [ignore Obsidian folders yet](https://forum.obsidian.md/t/ignore-a-folder-of-temporary-notes/4473/8).
 
 ## Wikilinks
@@ -25,6 +23,10 @@ By default, Obsidian uses wikilinks[^1] (double bracketed links). If you turn th
 
 For now, you'll have to do this manually for each image embed.
 
+Here's a test image to make sure my plugin is working:
+![[assets/images/tom-wheatley-HdIb-5gRv7U-unsplash 1.jpg]]
+
+Wait, disregard this, apparently it's not working because of the assets folder. Will work on a fix for this soon.
 
 ## Suggested Plugins
 ### Core Plugins - Templates
