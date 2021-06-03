@@ -5,15 +5,19 @@ Based on the Jekyll digital garden template by [Maxime Vaillancourt](https://git
 
 ## How is this different?
 ### New Features
-- Categories! (not clickable yet)
-- Emoji favicons! Configure at site level or page level with `favicon:` variable
-- Archive Page! Shows an index of all notes, month updated, category, and excerpt.
-- Tables! [Commonmark Github Flavored Markdown](<[Commonmark Github Flavored Markdown](https://github.com/github/jekyll-commonmark-ghpages)>)! Table syntax matches Obsidian and Github.
-- Obsidian Templates! Easily create a new note or page with the proper front matter variables.
+- **Categories!** (not clickable yet)
+- **Emoji favicons!** Configure at site level or page level with `favicon:` variable
+- **Archive Page!** An index of all notes, date updated, category, and excerpt.
+- **Tables!** Table syntax matches Obsidian and Github with [Commonmark Github Flavored Markdown](<[Commonmark Github Flavored Markdown](https://github.com/github/jekyll-commonmark-ghpages)>) integration
+- **Obsidian Templates!** Easily create a new note or page with the proper front matter variables.
+- **Bok Choy Theme!**
+
+### More great nerdy stuff
 - Automatic Title Generation from `title:` variable! Renders as `<h1>` heading at the top of the page, so you don't need to type it manually for `_pages` anymore.
 - Permalink `/:slug` by default for all notes and pages, so you don't need to specify `permalink:` anymore! By default, all pages will be built in the root directory.
 - Responsive code blocks! Enabled horizontal scroll for codeblocks on narrow browsers.
 - Updated metadata in `head.html` with way more conditional logic based on site configuration, stripped extra whitespace from descriptions, and made sure absolute URLs for OpenGraph are rendering properly
+- Notes graph uses primary theme color variable from `style.css`
 
 ### PHP/Python Server Support
 Powered by: Github --> [DeployHQ](https://www.deployhq.com/r/nx7qct) --> Dreamhost
