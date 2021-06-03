@@ -24,13 +24,6 @@ main>*>:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6), footer *, nav * {
   font-size: .6rem;
 }
 
-/*
-@supports (font-variation-settings: normal) {
-  h1 {
-    font-family: "NewsReader Variable", serif;
-    font-variation-settings: "opsz"33.5 "wght"261;
-  }
-} */
 /* Full bleed reset */
 body, html {
   margin: 0;

@@ -20,3 +20,15 @@ I chose [Inter](https://rsms.me/inter/) and [Wremena](https://typefaces.temporar
 For dates, I've enabled alternate numbers, slashed zeroes, and case sensitive forms. I've also enabled superscript, fractions, and disambiguation glyph set by default.
 
 Wremena is used for headings. I've enabled tabular numbers, just in case you add some numbers to your note titles.
+
+# CSS Changelog
+- Body has a max width now
+- Font size is calculated to be intrinsically responsive
+- No more inline styles, everything has a class or unique element
+- Semantic HTML, removed deprecated tags
+	- Rearranged `<article>` to only contain article text and nothing more
+	- Backlinks are now an `<aside>`
+- Separated font embeds to `fonts.css`
+- Headings have hyphenated word breaks for large text on small devices
+- Increased width for breakpoint to avoid squished grids
+- Lots of variables in `:root` based on reducing opacity for the same primary theme color
