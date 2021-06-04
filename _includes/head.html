@@ -17,8 +17,10 @@
   {% elsif site.favicon != null %}
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>{{ site.favicon }}</text></svg>">
   {% else %}
-  <!-- Add fallback favicon.ico to your root directory for browsers that don't support SVG favicons, it will be detected automatically -->
+  <!-- Add fallback favicons here for browsers that don't support SVG -->
+  <link rel=icon href="/favicon.png" sizes="120x120" type="image/png">
   {% endif %}
+
 
   <link rel="stylesheet" href="assets/css/style.css">
 
