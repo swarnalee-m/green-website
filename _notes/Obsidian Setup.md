@@ -24,7 +24,7 @@ By default, Obsidian uses wikilinks[^1] (double bracketed links). If you turn th
 For now, you'll have to do this manually for each image embed.
 
 Here's a test image to make sure my plugin is working:
-![[assets/images/tom-wheatley-HdIb-5gRv7U-unsplash 1.jpg]]
+![[tom-wheatley-HdIb-5gRv7U-unsplash 1.jpg]]
 
 Wait, disregard this, apparently it's not working because of the assets folder. Will work on a fix for this soon.
 

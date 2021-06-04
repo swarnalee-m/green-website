@@ -228,6 +228,7 @@ a::after {
   position: relative;
 }
 
+/* Need to exclude a img arrow for external links eventually */
 a.internal-link:after, a.footnote-backref:after {
   content: "";
 }
