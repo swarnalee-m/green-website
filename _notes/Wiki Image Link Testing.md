@@ -1,4 +1,5 @@
 ---
+category: Development
 ---
 
 # Wikilinks
@@ -9,11 +10,14 @@ I'm working on another plugin to complement the bidirectional link generator and
 This is a useful reference for [Regex in Ruby](https://ruby-doc.org/core-3.0.1/doc/regexp_rdoc.html) and this is a good [Ruby Regex Tester](https://rubular.com/).
 
 # Version 1
-- Will not support `"title"` Markdown links yet
+- Does not support `"title"` in Markdown links because I couldn't figure out the regex
 	- Example:  `![Alt text](tom-wheatley-HdIb-5gRv7U-unsplash 1.jpg "a title")`
 	- If you use these, the image will break
+- Fixed the problem with links rendering inside `[[code blocks]]`
 
-
+```
+But it doesn't work in this type of block because of the extra linebreaks and characters before the tick marks
+```
 
 # Testing
 ![[tom-wheatley-HdIb-5gRv7U-unsplash 1.jpg]]

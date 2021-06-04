@@ -1,6 +1,6 @@
 ---
 title: 
-category: 
+category: Development
 favicon: 🎨
 ---
 

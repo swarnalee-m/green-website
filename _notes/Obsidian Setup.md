@@ -16,17 +16,14 @@ Open new folder as vault and select the main digital garden folder.
 Make sure you're working on notes in the `_notes` directory, not `_site`. Unfortunately, you'll just have to put up with all the extra files in your Obsidian view since we can't [ignore Obsidian folders yet](https://forum.obsidian.md/t/ignore-a-folder-of-temporary-notes/4473/8).
 
 ## Wikilinks
-By default, Obsidian uses wikilinks[^1] (double bracketed links). If you turn this off by default, you might get errors with bidirectional page links. However, you'll also get errors with wikilink image embeds. Here's my solution:
+By default, Obsidian uses wikilinks, or double bracketed links. They look `[[like this]]`. If you keep wikilinks enabled, you'll also use proprietary Obsidian wiki embeds for images. They look like this: `![[image.png]]`
 
-- Use Wikilinks for all links and embeds
-- Convert embeds to standard Markdown with [Wikilinks to MDLinks Plugin](https://github.com/agathauy/wikilinks-to-mdlinks-obsidian)
-
-For now, you'll have to do this manually for each image embed.
+This is not standard Markdown! So I wrote an update to the `bidirectional links generator` script that updates this to the proper HTML code. 
 
 Here's a test image to make sure my plugin is working:
 ![[tom-wheatley-HdIb-5gRv7U-unsplash 1.jpg]]
 
-Wait, disregard this, apparently it's not working because of the assets folder. Will work on a fix for this soon.
+Read more about my fix at [[Wiki Image Link Testing]]
 
 ## Suggested Plugins
 ### Core Plugins - Templates
@@ -40,6 +37,3 @@ Wait, disregard this, apparently it's not working because of the assets folder. 
 - [Paste URL Into Selection](https://github.com/denolehov/obsidian-url-into-selection)
 - [Emoji Toolbar](https://github.com/oliveryh/obsidian-emoji-toolbar)
 - [Advanced Tables](https://github.com/tgrosinger/advanced-tables-obsidian)
-
-## Footnotes
-[^1]: I couldn't demonstrate what a wikilink looks like because if you type the double bracket wikilink syntax within a code block, the bidirectional link generator renders it as an invalid link. Please refrain from using double brackets unless you're actually trying to link to a page.
