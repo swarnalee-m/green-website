@@ -34,3 +34,8 @@ I applied the fix in [this issue](https://github.com/maximevaillancourt/digital-
 
 ## Style
 The site theme is controlled by `css/style.css`. Read documentation on the current theme in [[Style & Theme]].
+
+## Local Environment
+If you want to set up Jekyll on your local environment, I recommend following [this guide](https://mac.install.guide/ruby/4.html). It covers Git, Ruby, homebrew, and why you shouldn't use sudo for everything.
+
+[Maxime's tutorial](https://maximevaillancourt.com/blog/setting-up-your-own-digital-garden-with-jekyll) also has a great section on setting up your local environment.

@@ -11,6 +11,8 @@ At the top of each new note, you must include the triple dashes that make up [Je
 ---
 ```
 
+If you forget to add this to a note, it's no big deal! Maxime wrote a plugin called `empty_front_matter_note_injector.rb` which adds these dashes before building the site.
+
 ## Note Title
 The title of the `.md` file will automatically become the note title heading, rendered as an `<h1>`. Keeping this in mind, start your note content from `<h2>` or `##`.
 
@@ -59,7 +61,7 @@ The table above was created with this markup:
 `````
 | foo | bar |
 | --- | --- |
-| baz | cats |
+| baz | [[cats]] |
 `````
 
 More info in the [GFM Documentation](https://github.github.com/gfm/#tables-extension-)
@@ -82,3 +84,6 @@ Description of each option [here](https://github.com/gjtorikian/commonmarker#opt
 -   `...` will become an ellipsis (like this …)
 -   `<<` will become a left guillemet (like this «) – an optional following space will become a non-breakable space
 -   `>>` will become a right guillemet (like this ») – an optional leading space will become a non-breakable space
+
+## Footnotes
+If you create footnotes, you'll need to add a heading for Footnotes at the bottom of your note manually (for now)

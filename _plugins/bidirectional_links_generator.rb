@@ -13,48 +13,6 @@ class BidirectionalLinksGenerator < Jekyll::Generator
 
     all_docs.each do |current_note|
 
-      # Convert all Obsidian Images and MD Images to HTML with correct image path
-      # Added by Megumi for the template at https://garden.megu.space
-      image_path = "/assets/images/"
-
-      # Generate correct path for Markdown images. Doesn't work with "title" yet
-      current_note.content = current_note.content.gsub(
-        /
-        (?:!\[{1}) # One match of ![
-        ([^\]]*) # Alt Text between []
-        (?:\]) # Ending alt text bracket ]
-        (?:\() # Starting Parenthesis
-        (?!assets)(?!\/assets)(?!http) # Negative lookahead
-        ([^\)]+) # Select all filename except closing parenthesis
-        (?:\){1}) # One match of )
-        (?!`$) # Exclude codeblocks ending in `
-        /x,
-        '<img src="' + image_path + '\2" alt="\1">'
-      )
-
-      # Generate path and code for Obsidian embed format ![[image.png]]
-      current_note.content = current_note.content.gsub(
-        /
-        !\[\[ # Starting with ![[
-        (?!assets)(?!\/assets) # Exclude embeds with assets path
-        ([^\]]+) # Capture entire filename
-        \]\] # Make sure it ends in ]]
-        (?!`$) # Exclude codeblocks ending in `
-        /x,
-        '<img src="' + image_path + '\1">'
-      )
-
-      # Convert remaining Obsidian image embeds
-      current_note.content = current_note.content.gsub(
-        /
-        !\[\[ # Starting with ![[
-        ([^\]]+) # Capture entire filename
-        \]\] # Make sure it ends in ]]
-        (?!`$) # Exclude codeblocks ending in `
-        /x,
-        '<img src="\1">'
-      )
-
       # Convert all Wiki/Roam-style double-bracket link syntax to plain HTML
       # anchor tag elements (<a>) with "internal-link" CSS class
       all_docs.each do |note_potentially_linked_to|
@@ -66,36 +24,31 @@ class BidirectionalLinksGenerator < Jekyll::Generator
         new_href = "#{note_potentially_linked_to.url}#{link_extension}"
         anchor_tag = "<a class='internal-link' href='#{new_href}'>\\1</a>"
 
-        # Obsidian Default Images Path
-        # image_path_start = "<img src='assets/images/"
-        # image_path_end = "'>"
-        # image_path = "(assets/images/"
-
         # Replace double-bracketed links with label using note title
         # [[A note about cats|this is a link to the note about cats]]
         current_note.content = current_note.content.gsub(
-          /\[\[#{title_from_filename}\|(.+?)(?=\])\]\](?!`$)/i,
+          /\[\[#{title_from_filename}\|(.+?)(?=\])\]\](?!.*?[\r\n]+[`{3,}|~{3,}])/i,
           anchor_tag
         )
 
         # Replace double-bracketed links with label using note filename
         # [[cats|this is a link to the note about cats]]
         current_note.content = current_note.content.gsub(
-          /\[\[#{note_potentially_linked_to.data['title']}\|(.+?)(?=\])\]\](?!`$)/i,
+          /\[\[#{note_potentially_linked_to.data['title']}\|(.+?)(?=\])\]\](?!.*?[\r\n]+[`{3,}|~{3,}])/i,
           anchor_tag
         )
 
         # Replace double-bracketed links using note title
         # [[a note about cats]]
         current_note.content = current_note.content.gsub(
-          /\[\[(#{note_potentially_linked_to.data['title']})\]\](?!`$)/i,
+          /\[\[(#{note_potentially_linked_to.data['title']})\]\](?!.*?[\r\n]+[`{3,}|~{3,}])/i,
           anchor_tag
         )
 
         # Replace double-bracketed links using note filename
         # [[cats]]
         current_note.content = current_note.content.gsub(
-          /\[\[(#{title_from_filename})\]\](?!`$)/i,
+          /\[\[(#{title_from_filename})\]\](?!.*?[\r\n]+[`{3,}|~{3,}])/i,
           anchor_tag
         )
 
@@ -107,9 +60,10 @@ class BidirectionalLinksGenerator < Jekyll::Generator
       # Still need to find a way to exclude from codeblocks with ```
       current_note.content = current_note.content.gsub(
         /
-        (?:^\[\[.|\s{1}\[\[) # Starting with [[ on newline or preceded by space
+        (?:^\[{2}.|\s{1}\[{2}) # Starting with [[ on newline or preceded by space
         ([^\]]+) # Capture entire filename
-        \]\] # Make sure it ends in ]]
+        \]{2} # Make sure it ends in ]]
+        (?!.*?[\r\n]+[`{3,}|~{3,}]) # Exclude codeblocks
         /x, # match on the remaining double-bracket links
         <<~HTML.chomp    # replace with this HTML (\\1 is what was inside the brackets)
           <span title='There is no note that matches this link.' class='invalid-link'>

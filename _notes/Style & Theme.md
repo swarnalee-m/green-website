@@ -32,3 +32,4 @@ Wremena is used for headings. I've enabled tabular numbers, just in case you add
 - Headings have hyphenated word breaks for large text on small devices
 - Increased width for breakpoint to avoid squished grids
 - Lots of variables in `:root` based on reducing opacity for the same primary theme color
+- Added `display: grid` liberally when codeblocks broke the grid

@@ -93,6 +93,10 @@ nav {
   grid-template-areas: "article aside"
 }
 
+article {
+  display: grid;
+}
+
 main section {
   grid-column: 1 / -1;
 }

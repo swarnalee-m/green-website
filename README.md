@@ -1,16 +1,17 @@
 # Green Web Template
-This Jekyll template is a way to organize and publish your thoughts from [Obsidian](https://obsidian.md/) to the web, complete with backlinks, notes graph, and wikilink support. This template was modified by [Megumi Tanaka](https://megumi.co) in 2021. Here's <a href="https://garden.megu.space/your-first-note.html#installation">how to install this template</a>.
+This Jekyll template is a way to organize and publish your thoughts from [Obsidian](https://obsidian.md/) to the web, complete with backlinks, notes graph, and wikilink support. This template was modified by [Megumi Tanaka](https://megumi.co) in 2021. Here's <a href="https://garden.megu.space/your-first-note.html#installation" class="internal-link">how to install this template</a>.
 
 Based on the [Jekyll digital garden template](https://github.com/maximevaillancourt/digital-garden-jekyll-template) by Maxime Vaillancourt.
 
 ## How is this different?
 ### New Features
+- **Obsidian embeds!** Yes, images formatted `![[like this]]` will render automatically with the correct asset path!
 - **Categories!** (not clickable yet)
 - **Emoji favicons!** Configure at site level or page level with `favicon:` variable
 - **Archive Page!** An index of all notes, date updated, category, and excerpt.
-- **Tables!** Table syntax matches Obsidian and Github with [Commonmark Github Flavored Markdown](<[Commonmark Github Flavored Markdown](https://github.com/github/jekyll-commonmark-ghpages)>) integration
+- **Tables!** Table syntax matches Obsidian and Github with [Commonmark Github Flavored Markdown](https://github.com/github/jekyll-commonmark-ghpages) integration
 - **Obsidian Templates!** Easily create a new note or page with the proper front matter variables.
-- **Green Bok Choy Theme!**
+- **Green Bok Choy Theme!** This is the public version of the theme I'll be using for my personal site [megu.space](https://megu.space)
 
 ## What makes this a green template?
 1. 🥬 The theme is literally **green**
@@ -35,13 +36,15 @@ Github hasn't made a statement either, but parent company Microsoft's Azure Clou
 If you want to use this template on Netlify, just remove `.htaccess` and delete it from `_config.yml`
 
 ### More great nerdy changes
+- New Obsidian Embed plugin also handles standard MD Images and adds path to Jekyll assets folder, including `title` and `alt`.  New plugin is called `obsidian_images_generator.rb`
+- Brackets inside code blocks are now `[[ignored]]` by the bidirectional link generator! Check my updates to `bidirectional_links_generator.rb` regex
 - Automatic Title Generation from `title:` variable! Renders as `<h1>` heading at the top of the page, so you don't need to type it manually for `_pages` anymore.
 - Permalink `/:slug` by default for all notes and pages, so you don't need to specify `permalink:` anymore! By default, all pages will be built in the root directory.
 - Responsive code blocks! Enabled horizontal scroll for codeblocks on narrow browsers.
 - Updated metadata in `head.html` with way more conditional logic based on site configuration, stripped extra whitespace from descriptions, and made sure absolute URLs for OpenGraph are rendering properly
 - Notes graph uses primary theme color variable from `style.css`
 
-See more about theme updates at [[Style & Theme]]
+See more about theme updates at <a href="https://garden.megu.space/style-theme.html" class="internal-link">Style & Theme</a>.
 
 ### PHP/Python Server Support
 Powered by: Github --> [DeployHQ](https://www.deployhq.com/r/nx7qct) --> Dreamhost
@@ -71,9 +74,14 @@ Interesting errors I've encountered:
 - Your file path must not have any spaces in it or your `bundle` command will fail!
 - Plugins are not compatible with Github Pages instance of Jekyll, so you have to build your site locally and reconfigure output to `docs` folder. I have a similar setup in [this github pages repository](https://github.com/meewgumi/digital-garden-ghpages-template)
 - This template only works for apex and subdomains. If you build your site in a `/directory`, you may have to reconfigure the relative links throughout the template.
-- Bidirectional link generator converts double bracket links inside codeblocks too
+- ~~Bidirectional link generator converts double bracket links inside codeblocks too~~ **Fixed!**
+- Does not yet support Obsidian Heading Links in this format `[[page#Heading]]`, although each heading automatically generates an `id=` so you can create anchor links manually with HTML
+- Emoji is not unicode, so they might not display properly in all browsers and operating systems
+- Footnotes automatically open in new tab, even if they're internal links
+- D3.js graph zooms when you scroll, so I disabled the graph by default
+- Excerpts on archive page truncate weirdly. I wish there was a way to exclude headings. There probably is if I get deeper into Nokogiri documentation.
 
 # License
 [Original Jekyll template](https://github.com/maximevaillancourt/digital-garden-jekyll-template) by Maxime Vaillancourt is available under the [MIT license](LICENSE.md). [Buy Maxime a coffee](https://ko-fi.com/maximevaillancourt)! ☕️
 
-This modified version by Megumi Tanaka is also publicly available and you are free to edit as you wish!
+This "Green" version by Megumi Tanaka is publicly available and you are free to edit as you wish! [Buy Megumi a tea](https://www.buymeacoffee.com/megumi)! 🍵
