@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Welcome! &#x1F96C
+title: Welcome! 🥬
 id: home
 ---
 
