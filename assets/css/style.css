@@ -201,6 +201,10 @@ ul.archive, .archive li {
 }
 
 /* Tables in Markdown */
+table {
+  max-width: min-content;
+}
+
 table, table>*>*>* {
   border: 1px solid var(--text-color-faded);
   border-collapse: collapse;
