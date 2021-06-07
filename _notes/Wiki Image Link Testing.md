@@ -27,6 +27,7 @@ Is this also a code block oh shit
 I DID A GOOD REGEX!
 - Code blocks can contain `[[brackets]]` without rendering links!
 - Markdown images contain `title` now!
+	- **Update:** Regex is faulty. When title exists, the asset path picks up the space before the `"`. Will fix later.
 
 Edits:
 - New plugin called `obsidian_images_generator.rb` with higher priority than the bidirectional links generator
