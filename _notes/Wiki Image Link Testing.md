@@ -44,6 +44,40 @@ For those of you who would like to know, this is the regex I added to the end of
 
 It works! Now you can drag and drop images to Obsidian editor and the asset path will automatically generate. Make sure to follow guidelines in [[Obsidian Setup]]
 
+# Version 3
+_In Progress_
+
+## Title Problem
+- Turns out `title` is still broken, I didn't actually fix it
+
+## HTML Problem
+- Creating HTML such as `<figure>` breaks Markdown images inside the tags because Markdown ignores syntax inside HTML tags
+- This isn't a problem for Obsidian style embeds because my generator converts them to HTML
+- However, this is a problem for traditional Markdown syntax, especially if you want to have things like `--` converted to an en dash automatically inside a `<figcaption>`
+- Solution I'm working on: Utilizing [Obsidian Comment Syntax](https://help.obsidian.md/How+to/Format+your+notes#Comments) to create a way to add HTML tags that don't show up in Obsidian Preview.
+
+## Solution
+- According to the [Github Flavored Markdown Docs](https://github.github.com/gfm/#html-blocks), Markdown will not be rendered in HTML blocks **UNLESS:**
+	- HTML and Markdown are all on one line
+	- HTML start and end tag have a line break between them and Markdown content
+	- I verified that this works by adding line breaks in Obsidian. Now I don't have to rewrite Markdown image parsers from scratch anymore!! 😭🙏
+
+Now the only problem is the `assets/images` path when converting Obsidian embeds to Markdown embeds. Will the obsidian image generator run before the Markdown parser? Let's see!
+
+**I DID IT!!**
+
+That was pretty difficult BUT with the new version of the images generator, you have to be careful to add line breaks when working with Markdown embeds inside HTML elements:
+
+```
+<figure>
+
+![alt text](inspector.png "Browser as design tool")
+
+</figure>
+```
+
+When Markdown embeds don't render, try adding line breaks before and after and it might work! What the image generator does is insert `assets/images` in the file path when it doesn't exist already. Now you can drag + drop images to Obsidian without worrying about asset paths!
+
 # Testing
 ![[tom-wheatley-HdIb-5gRv7U-unsplash 1.jpg]]
 
