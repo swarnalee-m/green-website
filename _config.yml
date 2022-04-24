@@ -1,9 +1,9 @@
-title:               Green Web Template
-url:                 'https://garden.megu.space'
+title:               swarnalee mazumder
+url:                 'https://swarnalee.me'
 favicon:              🥬
 
 # https://jekyllrb.com/docs/configuration/options/
-timezone: America/Los_Angeles
+timezone: Asia/Kolkata
 
 # Comment out .htaccess if you're uploading to a non-Apache server such as Netlify
 include:             ['.htaccess']
