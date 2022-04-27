@@ -1,11 +1,11 @@
 ---
 layout: page
-title: Welcome! 🥬
+title: 
 id: home
 ---
 
-<section class="callout">
-	Take a look at <a href="/your-first-note.html" class="internal-link">Your First Note</a> to get started on your exploration.
-</section>
+<!-- <section class="callout">
+Welcome to my <a href="/new-digital-garden.html" class="internal-link"> digital garden</a>!
+</section> -->
 
 {% include_relative README.md %}
